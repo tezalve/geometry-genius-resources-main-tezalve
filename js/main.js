@@ -7,7 +7,7 @@ function getShape(string){
 
 // adding html element using javascript
 function showResult(area, string){
-    document.getElementById('list').innerHTML += "<li>" + string + " " + area + " cm<sup>2</sup>" + "</li>" + "<button class='btn btn-primary btn-sm'>Convert To m<sup>2</sup></button>";
+    document.getElementById('list').innerHTML += "<li>" + string + "&emsp;" + area + " cm<sup>2</sup>" + "</li>" + "<button class='btn btn-primary btn-sm'>Convert To m<sup>2</sup></button>";
 }
 
 // simple multiplication
@@ -104,17 +104,5 @@ document.getElementById('ellibtn').addEventListener('click', function(e){
         showResult(area, getShape(id));
     }else{
         alert('Input cant be negative or string or empty!');
-    }
-});
-
-// random hexadecimal number generator
-function getRandomColor(){
-    return Math.floor(Math.random() * 0xffffff).toString(16).padEnd(6, "0");
-};
-
-// random color background
-document.addEventListener('mouseover', function(e){
-    if(e.target.classList.contains('clrchng')){
-        e.target.style.backgroundColor = '#' + getRandomColor();
     }
 });
