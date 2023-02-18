@@ -1,4 +1,4 @@
-// Set up the first 3 functions so that all I need is the clicked buttons id and the area formula
+// Set up the first 4 functions so that all I need is the clicked buttons id and the area formula
 
 // geting innerhtml to get the shape name
 function getShape(string){
@@ -12,63 +12,97 @@ function showResult(area, string){
 
 // simple multiplication
 function multi(num1, num2){
-    let num1Value = num1.value;
-    let num2Value = num2.value;
-    num1Value = parseFloat(num1Value);
-    num2Value = parseFloat(num2Value);
+    num1Value = parseFloat(num1);
+    num2Value = parseFloat(num2);
     return (num1Value*num2Value).toFixed(1);
+}
+
+// validate if negative or string is given as input
+function validate(num1, num2){
+    if(num1<0 || num2<0){
+        return false;
+    }else if(isNaN(num1) || isNaN(num2)){
+        return false;
+    }else if(num1 === '' || num2 === ''){
+        return false;
+    }else
+        return true;
 }
 
 // when calculate btn is clicked for triangle
 document.getElementById('tribtn').addEventListener('click', function(e){
     const id = e.target.id;
-    const triangleB = document.getElementById(id).parentElement.children[2].children[0].children[0];
-    const triangleH = document.getElementById(id).parentElement.children[2].children[2].children[0];
-    let TriArea = multi(triangleB, triangleH);
-    showResult(TriArea, getShape(id));
+    const input1 = document.getElementById(id).parentElement.children[2].children[0].children[0].value;
+    const input2 = document.getElementById(id).parentElement.children[2].children[2].children[0].value;
+    if(validate(input1,input2)){
+        const area = multi(input1, input2);
+        showResult(area, getShape(id));
+    }else{
+        alert('Input cant be negative or string or empty!');
+    }
 });
 
 // when calculate btn is clicked for rectangle
 document.getElementById('rectbtn').addEventListener('click', function(e){
     const id = e.target.id;
-    const triangleB = document.getElementById(id).parentElement.children[2].children[0].children[0];
-    const triangleH = document.getElementById(id).parentElement.children[2].children[2].children[0];
-    let TriArea = multi(triangleB, triangleH);
-    showResult(TriArea, getShape(id));
+    const input1 = document.getElementById(id).parentElement.children[2].children[0].children[0].value;
+    const input2 = document.getElementById(id).parentElement.children[2].children[2].children[0].value;
+    if(validate(input1,input2)){
+        const area = multi(input1, input2);
+        showResult(area, getShape(id));
+    }else{
+        alert('Input cant be negative or string or empty!');
+    }
 });
 
 // when calculate btn is clicked for parallelogram
 document.getElementById('parabtn').addEventListener('click', function(e){
     const id = e.target.id;
-    const triangleB = document.getElementById(id).parentElement.children[2].children[0].children[0];
-    const triangleH = document.getElementById(id).parentElement.children[2].children[2].children[0];
-    let TriArea = multi(triangleB, triangleH);
-    showResult(TriArea, getShape(id));
+    const input1 = document.getElementById(id).parentElement.children[2].children[0].children[0].value;
+    const input2 = document.getElementById(id).parentElement.children[2].children[2].children[0].value;
+    if(validate(input1,input2)){
+        const area = multi(input1, input2);
+        showResult(area, getShape(id));
+    }else{
+        alert('Input cant be negative or string or empty!');
+    }
 });
 
 // when calculate btn is clicked for rhombus
 document.getElementById('rhombtn').addEventListener('click', function(e){
     const id = e.target.id;
-    const triangleB = document.getElementById(id).parentElement.children[2].children[0].children[0];
-    const triangleH = document.getElementById(id).parentElement.children[2].children[2].children[0];
-    let TriArea = 0.5*multi(triangleB, triangleH);
-    showResult(TriArea, getShape(id));
+    const input1 = document.getElementById(id).parentElement.children[2].children[0].children[0].value;
+    const input2 = document.getElementById(id).parentElement.children[2].children[2].children[0].value;
+    if(validate(input1,input2)){
+        const area = 0.5*multi(input1, input2);
+        showResult(area, getShape(id));
+    }else{
+        alert('Input cant be negative or string or empty!');
+    }
 });
 
 // when calculate btn is clicked for pentagon
 document.getElementById('pentbtn').addEventListener('click', function(e){
     const id = e.target.id;
-    const triangleB = document.getElementById(id).parentElement.children[2].children[0].children[0];
-    const triangleH = document.getElementById(id).parentElement.children[2].children[2].children[0];
-    let TriArea = 0.5*multi(triangleB, triangleH);
-    showResult(TriArea, getShape(id));
+    const input1 = document.getElementById(id).parentElement.children[2].children[0].children[0].value;
+    const input2 = document.getElementById(id).parentElement.children[2].children[2].children[0].value;
+    if(validate(input1,input2)){
+        const area = 0.5*multi(input1, input2);
+        showResult(area, getShape(id));
+    }else{
+        alert('Input cant be negative or string or empty!');
+    }
 });
 
 // when calculate btn is clicked for Ellipse
 document.getElementById('ellibtn').addEventListener('click', function(e){
     const id = e.target.id;
-    const triangleB = document.getElementById(id).parentElement.children[2].children[0].children[0];
-    const triangleH = document.getElementById(id).parentElement.children[2].children[2].children[0];
-    let TriArea = 3.1416*multi(triangleB, triangleH);
-    showResult(TriArea, getShape(id));
+    const input1 = document.getElementById(id).parentElement.children[2].children[0].children[0].value;
+    const input2 = document.getElementById(id).parentElement.children[2].children[2].children[0].value;
+    if(validate(input1,input2)){
+        const area = 3.1416*multi(input1, input2);
+        showResult(area, getShape(id));
+    }else{
+        alert('Input cant be negative or string or empty!');
+    }
 });
