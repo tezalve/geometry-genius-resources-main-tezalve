@@ -19,7 +19,7 @@
 
     <!-- geometry section -->
     <section class="m-4 p-4 containter">
-        <div class="row">
+        <div class="row g-0">
             <div class="col-9">
                 <div class="row p-2">
                     <div class="card-group">
@@ -31,11 +31,11 @@
                                     <p class="card-text">Area (A) = 0.5 x b x h</p>
                                     <div class="row">
                                         <div class="col-4">
-                                            <input class="form-control" type="text" name="b" id="trib" placeholder="b">
+                                            <input class="form-control" type="text" name="b" placeholder="b">
                                         </div>
                                         <p class="col-2">cm</p>
                                         <div class="col-4">
-                                            <input class="form-control" type="text" name="h" id="trih" placeholder="h">
+                                            <input class="form-control" type="text" name="h" placeholder="h">
                                         </div>
                                         <p class="col-2">cm</p>
                                     </div>
@@ -61,7 +61,7 @@
                                         <p class="col-2">cm</p>
                                     </div>
                                     <br>
-                                    <button class="btn btn-primary">Calculate</button>
+                                    <button id="rectbtn" class="btn btn-primary">Calculate</button>
                                 </div>
                             </div>
                         </div>
@@ -82,18 +82,10 @@
                                         <p class="col-2">cm</p>
                                     </div>
                                     <br>
-                                    <button class="btn btn-primary">Calculate</button>
+                                    <button id="parabtn" class="btn btn-primary">Calculate</button>
                                 </div>
                             </div>
                         </div>
-                        <!-- <div class="col-3">
-                            <div class="card" style="width: 18rem;">
-                                <div class="card-body">
-                                <u><h5 class="card-title">Area Calculation</h5></u>
-                                <ol id="list"></ol>
-                                </div>
-                            </div>
-                        </div> -->
                     </div>
                 </div>
                 <div class="row p-2">
@@ -103,7 +95,7 @@
                                 <img class="card-img-top p-3" src="images/rhombus.png" alt="" height="200">
                                 <div class="card-body">
                                     <h5 class="card-title">Rhombus</h5>
-                                    <p class="card-text">Area (A) = 0.5 x d1 x d2</p>
+                                    <p class="card-text">Area (A) = 0.5 x d <sub>1</sub> x d <sub>2</sub> </p>
                                     <div class="row">
                                         <div class="col-4">
                                             <input class="form-control" type="text" name="d1" id="" placeholder="d1">
@@ -115,7 +107,7 @@
                                         <p class="col-2">cm</p>
                                     </div>
                                     <br>
-                                    <button class="btn btn-primary">Calculate</button>
+                                    <button id="rhombtn" class="btn btn-primary">Calculate</button>
                                 </div>
                             </div>
                         </div>
@@ -136,7 +128,7 @@
                                         <p class="col-2">cm</p>
                                     </div>
                                     <br>
-                                    <button class="btn btn-primary">Calculate</button>
+                                    <button id="pentbtn" class="btn btn-primary">Calculate</button>
                                 </div>
                             </div>
                         </div>
@@ -157,7 +149,7 @@
                                         <p class="col-2">cm</p>
                                     </div>
                                     <br>
-                                    <button class="btn btn-primary">Calculate</button>
+                                    <button id="ellibtn" class="btn btn-primary">Calculate</button>
                                 </div>
                             </div>
                         </div>
